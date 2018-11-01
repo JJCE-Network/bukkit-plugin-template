@@ -1,4 +1,4 @@
-package org.gestern;
+package com.jjce;
 
 import java.io.IOException;
 import java.util.logging.Logger;
@@ -23,7 +23,8 @@ public class MyPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-
+        log.info("Core Enabled!");
+        
         P = this;
         log = getLogger();
 
@@ -34,7 +35,7 @@ public class MyPlugin extends JavaPlugin {
 
         CommandExecutor myCommands = new Commands();
 
-        getCommand("myplugin").setExecutor(myCommands);
+        getCommand("core").setExecutor(myCommands);
 
         getServer().getPluginManager().registerEvents(new MyListener(), this);
 
@@ -45,7 +46,7 @@ public class MyPlugin extends JavaPlugin {
 
     @Override
     public void onDisable() {
-
+        log.info("Core Disabled!");
     }
 
     private boolean setupMetrics() {
