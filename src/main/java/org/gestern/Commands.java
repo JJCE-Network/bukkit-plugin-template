@@ -1,4 +1,4 @@
-package org.gestern;
+package com.jjce;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
