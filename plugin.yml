@@ -1,22 +1,28 @@
-name: MyPlugin
-authors: [anonymous]
-version: 0.1
-main: org.gestern.MyPlugin
+name: JJCE-Network-Core
+authors: Joshua Sing
+version: 1.5
+main: com.jjce.core
 
 softdepend: [Vault]
 
 commands:
-  myplugin:
-    description: myplugin command
-    aliases: [mp]
+  core:
+    description: JJCE-Network-Core Admin Command
+    aliases: [jjcecore]
     usage: |
-      /myplugin
-    permission: myplugin.admin
+      /core
+    permission: core.admin
+  core-status:
+    description: JJCE-Network-Core Admin Command
+    aliases: [jjcestatus]
+    usage: |
+      /core-status
+    permission: core.status
 
 permissions:
-  myplugin.use:
-    description: use myplugin
-    default: true
-  myplugin.admin:
-    description: myplugin admin features
+  core.status:
+    description: JJCE-Network-Core Admin Command
+    default: op
+  core.admin:
+    description: JJCE-Network-Core Admin Command
     default: op
